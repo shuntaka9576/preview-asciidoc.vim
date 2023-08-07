@@ -1,0 +1,15 @@
+= preview-asciidoc.vim
+
+== PlantUML test
+
+[plantuml]
+----
+@startuml
+title test PlantUML
+box "AWS" #fff2df
+  participant "application" as app
+  database database
+end box
+activate app
+@enduml
+----
