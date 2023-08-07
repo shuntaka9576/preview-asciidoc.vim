@@ -20,7 +20,7 @@ export const main = async (denops: Denops) => {
         "getbufline",
         bufnr,
         1,
-        "$"
+        "$",
       )) as string[];
 
       const text = lines.join("\n");
@@ -55,7 +55,7 @@ export const main = async (denops: Denops) => {
             JSON.stringify({
               title: "document",
               content: buildedText,
-            })
+            }),
           )
         );
       }
@@ -77,7 +77,7 @@ const initializeWebSocketServer = async () => {
     "/images/*",
     serveStatic({
       root: ".",
-    })
+    }),
   );
 
   app.get("/ws", (c: any) => {

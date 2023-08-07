@@ -1,5 +1,6 @@
-#  preview-asciidoc.vim
-*🚧 This plugin is in experimental use. 🚧*
+# preview-asciidoc.vim
+
+_🚧 This plugin is in experimental use. 🚧_
 
 Preview [Asciidoctor](https://asciidoctor.org/docs/user-manual/) in real-time!
 
@@ -7,10 +8,10 @@ Preview [Asciidoctor](https://asciidoctor.org/docs/user-manual/) in real-time!
 
 ## Requirements
 
-* [denops.vim](https://github.com/vim-denops/denops.vim)
-* asciidoctor("asciidoctor" command in $PATH)
-* asciidoctor-diagram
-* PlantUML
+- [denops.vim](https://github.com/vim-denops/denops.vim)
+- asciidoctor("asciidoctor" command in $PATH)
+- asciidoctor-diagram
+- PlantUML
 
 ## Installtaion
 
@@ -29,7 +30,8 @@ Preview [Asciidoctor](https://asciidoctor.org/docs/user-manual/) in real-time!
 ```
 
 ## Features
-* [ ] Support Vim
+
+- [ ] Support Vim
 
 ## For Development
 
