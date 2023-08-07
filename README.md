@@ -24,6 +24,10 @@ Preview [Asciidoctor](https://asciidoctor.org/docs/user-manual/) in real-time!
 }
 ```
 
+```vim
+:AsciidocPreview
+```
+
 ## Features
 * [ ] Support Vim
 
