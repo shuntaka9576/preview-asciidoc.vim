@@ -8,10 +8,27 @@ Preview [Asciidoctor](https://asciidoctor.org/docs/user-manual/) in real-time!
 
 ## Requirements
 
+denops.vim requires the latest version of Deno. See [Deno's official manual](https://deno.land/manual/getting_started/installation) for details.
+
 - [denops.vim](https://github.com/vim-denops/denops.vim)
+
+Install asciidoctor tools.
+
 - asciidoctor("asciidoctor" command in $PATH)
 - asciidoctor-diagram
-- PlantUML
+
+```bash
+brew install asciidoctor
+gem install asciidoctor-diagram
+```
+
+Install graphviz.
+
+```bash
+brew install cask
+brew install oracle-jdk --cask
+brew install graphviz
+```
 
 ## Installtaion
 
@@ -36,6 +53,7 @@ Preview [Asciidoctor](https://asciidoctor.org/docs/user-manual/) in real-time!
 ## For Development
 
 ```vim:init.vim
+" init.vim
 set runtimepath+=~/repos/github.com/vim-denops/denops.vim
 set runtimepath+=~/repos/github.com/shuntaka9576/preview-asciidoc.vim
 
@@ -47,5 +65,5 @@ endif
 ```
 
 ```
-nvim -u ~/repos/github.com/shuntaka9576/init.vim/init.vim ./testdata/test.adoc
+nvim -u ./init.vim ./testdata/test.adoc
 ```
