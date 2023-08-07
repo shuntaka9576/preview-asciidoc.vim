@@ -9,9 +9,6 @@ export const template = (params: { port: number }) =>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
       const receiveMessage = ({ data }) => {
-        console.log("===");
-        console.log(data);
-        console.log("===");
         const article = JSON.parse(data);
         document.title = "Preview | " + article.title;
         $(".pasciidoc").html(article.content);
