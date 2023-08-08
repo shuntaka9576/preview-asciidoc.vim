@@ -1,8 +1,6 @@
 # preview-asciidoc.vim
 
-_🚧 This plugin is in experimental use. 🚧_
-
-Preview [Asciidoctor](https://asciidoctor.org/docs/user-manual/) in real-time!
+Preview [Asciidoctor](https://asciidoctor.org/docs/user-manual/) in real-time with neovim/Vim.
 
 ![demo](https://res.cloudinary.com/dkerzyk09/image/upload/v1691379574/tools/preview-asciidoc.vim/demo.gif)
 
@@ -45,10 +43,6 @@ brew install graphviz
 ```vim
 :AsciidocPreview
 ```
-
-## Features
-
-- [ ] Support Vim
 
 ## For Development
 

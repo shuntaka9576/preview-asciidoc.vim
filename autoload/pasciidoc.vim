@@ -14,6 +14,9 @@ function! pasciidoc#init_preview() abort
 endfunction
 
 function! pasciidoc#refresh_content() abort
+  if denops#plugin#wait('pasciidoc') != 0
+    return ''
+  endif
   call denops#request_async('pasciidoc',
         \ 'refreshContent',
         \ [],
