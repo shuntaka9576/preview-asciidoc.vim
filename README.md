@@ -6,16 +6,14 @@ Preview [Asciidoctor](https://asciidoctor.org/docs/user-manual/) in real-time wi
 
 ## Requirements
 
-denops.vim requires the latest version of Deno. See [Deno's official manual](https://deno.land/manual/getting_started/installation) for details.
+Install Deno.
 
-- [denops.vim](https://github.com/vim-denops/denops.vim)
+[denops.vim](https://github.com/vim-denops/denops.vim) requires the latest version of Deno. See [Deno's official manual](https://deno.land/manual/getting_started/installation) for details.
 
 Install asciidoctor tools.
 
-- asciidoctor("asciidoctor" command in $PATH)
-- asciidoctor-diagram
-
 ```bash
+# "asciidoctor" command in $PATH
 brew install asciidoctor
 gem install asciidoctor-diagram
 ```
@@ -28,7 +26,7 @@ brew install oracle-jdk --cask
 brew install graphviz
 ```
 
-## Installtaion
+## Installation
 
 ```lua
 -- lazy.nvim
@@ -42,22 +40,4 @@ brew install graphviz
 
 ```vim
 :AsciidocPreview
-```
-
-## For Development
-
-```vim:init.vim
-" init.vim
-set runtimepath+=~/repos/github.com/vim-denops/denops.vim
-set runtimepath+=~/repos/github.com/shuntaka9576/preview-asciidoc.vim
-
-if !has('nvim')
-  set nocompatible
-  source ~/repos/github.com/vim-denops/denops.vim/plugin/denops.vim
-  source ~/repos/github.com/shuntaka9576/preview-asciidoc.vim/plugin/pasciidoc.vim
-endif
-```
-
-```
-nvim -u ./init.vim ./testdata/test.adoc
 ```
