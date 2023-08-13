@@ -2,5 +2,7 @@
   "deno.enable": true,
   "deno.lint": false,
   "deno.unstable": true,
-  "tsserver.enable": false
+  "deno.config": "deno.json",
+  "tsserver.enable": false,
+  "prettier.enable": false
 }

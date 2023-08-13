@@ -1,0 +1,5 @@
+{
+  "fmt": {
+    "exclude": ["README.md"]
+  }
+}
