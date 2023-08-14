@@ -142,25 +142,25 @@ const initializeWebSocketServer = async (config: Config) => {
     return response;
   });
 
+  app.get("/", (c) => {
+    return c.html(template({ port: port }));
+  });
+
+  app.get("/images/*", async (c) => {
+    const url = new URL(c.req.url);
+    const path = join(config.pluginPath, url.pathname);
+
+    const content = await Deno.readFile(path);
+    const mimeType = getMimeType(path);
+    if (mimeType) {
+      c.header("Content-Type", mimeType);
+    }
+
+    return c.body(content);
+  });
+
   for (let retry = 0; retry < 3; retry++) {
     try {
-      app.get("/", (c) => {
-        return c.html(template({ port: port }));
-      });
-
-      app.get("/images/*", async (c) => {
-        const url = new URL(c.req.url);
-        const path = join(config.pluginPath, url.pathname);
-
-        const content = await Deno.readFile(path);
-        const mimeType = getMimeType(path);
-        if (mimeType) {
-          c.header("Content-Type", mimeType);
-        }
-
-        return c.body(content);
-      });
-
       const server = new Server({
         port: port,
         hostname: hostname,
