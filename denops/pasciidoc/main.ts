@@ -88,10 +88,12 @@ const initConfig = async (
     }
 
     const imagesDir = join(pluginPath, "images");
-    for await (const dirEntry of Deno.readDir(imagesDir)) {
-      if (dirEntry.isFile) {
-        const filePath = `${imagesDir}/${dirEntry.name}`;
-        await Deno.remove(filePath);
+    if (await fileExists(imagesDir)) {
+      for await (const dirEntry of Deno.readDir(imagesDir)) {
+        if (dirEntry.isFile) {
+          const filePath = `${imagesDir}/${dirEntry.name}`;
+          await Deno.remove(filePath);
+        }
       }
     }
 
@@ -110,6 +112,15 @@ const initConfig = async (
     };
   } catch (e) {
     throw e;
+  }
+};
+
+const fileExists = async (filepath: string): Promise<boolean> => {
+  try {
+    await Deno.stat(filepath);
+    return true;
+  } catch (e) {
+    return false;
   }
 };
 
