@@ -3,6 +3,7 @@ if exists('g:loaded_pasciidoc')
 endif
 
 let g:loaded_pasciidoc = 1
+let g:padoc_root_dir = expand('<sfile>:h:h')
 
 function! s:start_plugin() abort
   command! -buffer AsciidocPreview call pasciidoc#init_preview()
