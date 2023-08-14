@@ -42,6 +42,7 @@ export const main = async (denops: Denops) => {
       if (isDocBuilding === false) {
         const p = Deno.run({
           cmd: [config.shell],
+          cwd: config.pluginPath,
           stdout: "piped",
           stdin: "piped",
         });
