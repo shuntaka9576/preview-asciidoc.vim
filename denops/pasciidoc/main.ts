@@ -29,7 +29,7 @@ export const main = async (denops: Denops) => {
         "$",
       )) as string[];
 
-      const text = lines.join("\n");
+      const text = lines.join("\n").replaceAll("\\n", "\\\\n");
       const encoder = new TextEncoder();
       const decoder = new TextDecoder();
 
